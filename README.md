@@ -17,9 +17,6 @@
 
 - Un gitlab-runner en mode execution sur la machine locale ( executor = shell ou docker (avec une image Kaniko sur la CI) ) 
 
-![alt text](image-1.png) 
-
-
 # ÉTAPE POUR ACCEDER À L'APPLICATION
 
 - Ajout de l'adresse de node de cluster (controle plane dans le cas de cluster kind) dans "/etc/hosts"  associé à la valeur de Host définie en fichier de configuration Ingress (host)
