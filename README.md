@@ -15,7 +15,10 @@
 
 - EXTRAIRE Le port (NodePort) de service nginx ingress controller dans le cas de l'exercice ( 30947 )
 
-- Un gitlab-runner en mode execution sur la machine locale ( executor = shell ou docker (avec une image Kaniko sur la CI) )
+- Un gitlab-runner en mode execution sur la machine locale ( executor = shell ou docker (avec une image Kaniko sur la CI) ) 
+
+![alt text](image-1.png) 
+
 
 # ÉTAPE POUR ACCEDER À L'APPLICATION
 
@@ -28,7 +31,9 @@
 
 # AFFICHAGE DE FRONT ATTENDU 
 
-- Simple HELLO WORLD avec un messge envoyé par le backend avec l'état de connexion avec la base de donnée ( une base de donnée hebergée sur du cloud AWS dans le cas de cette application )  
+- Simple HELLO WORLD avec un messge envoyé par le backend avec l'état de connexion avec la base de donnée ( une base de donnée hebergée sur du cloud AWS dans le cas de cette application )   
+
+
 
 
 # LIEN VERS VERS UNE PIPELINE REUSSIE 
