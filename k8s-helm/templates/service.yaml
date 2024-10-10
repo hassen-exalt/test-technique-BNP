@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Release.Name }}-front-service
+  namespace: {{ .Release.Namespace }}
+spec:
+  selector:
+    app: front
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+      
+  type: ClusterIP  # dans notre cas vu qu'on utilise l'ingress  ça peut etre un NodePort si on veut pas ajouter un ingress 
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Release.Name }}-backend-service
+  namespace: {{ .Release.Namespace }}
+spec:
+  selector:
+    app: backend
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
+  type: ClusterIP  # dans notre cas vu qu'on utilise l'ingress  ça peut etre un NodePort si on veut pas ajouter un ingress 

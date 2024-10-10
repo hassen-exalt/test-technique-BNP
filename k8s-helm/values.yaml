@@ -1,0 +1,27 @@
+front:
+  replicas: 1
+  image:
+    repository: hassenexalt/frontend
+    tag: test # the version of the image that was pushed on the dockerhub 
+  env:
+    REACT_APP_BACKEND_URL: "http://myapplication.local.test:30947/api"  # 30947 the Node Port number of the nginx ingress controller service (NodePort) it is mandatory to get it  to call the application wih 
+
+
+backend:
+  replicas: 1
+  image:
+    repository: hassenexalt/backend
+    tag: test # the version of the image that was pushed on the dockerhub
+  env:
+    SPRING_POSTGRES_USERNAME: "postgres"
+    SPRING_POSTGRES_PASSWORD: "fPS5iekAPkmFSydS"
+    SPRING_POSTGRES_URL: "jdbc:postgresql://database-2.cbwg4us8upvj.eu-west-3.rds.amazonaws.com:5432/database2" 
+    
+
+rbac:
+  enabled: true  #condition for activation of RBAC
+
+
+
+ingress:
+  host: "myapplication.local.test"

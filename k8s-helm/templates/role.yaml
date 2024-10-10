@@ -1,0 +1,25 @@
+{{- if .Values.rbac.enabled }} #condition for activation of RBAC
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  namespace: {{ .Release.Namespace }}
+  name: {{ .Release.Name }}-backend-role
+rules:
+  - apiGroups: [""]
+    resources: ["pods", "deployments"]
+    verbs: ["get", "list", "watch"]   #limitation of the permissions of the backend pod 
+{{- end }} 
+
+--- 
+
+{{- if .Values.rbac.enabled }} #condition for activation of RBAC
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  namespace: {{ .Release.Namespace }}
+  name: {{ .Release.Name }}-front-role
+rules:
+  - apiGroups: [""]
+    resources: ["pods", "deployments"]
+    verbs: ["get", "list", "watch"]   #limitation of the permissions of the frontend pod 
+{{- end }} 
