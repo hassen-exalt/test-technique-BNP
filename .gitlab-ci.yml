@@ -6,9 +6,9 @@ stages:
 # Variables globales
 variables:
   KIND_CLUSTER_NAME: "kind"
-  KUBE_NAMESPACE: "myapp-local"
-  HELM_RELEASE_NAME: "myapp"
-  IMAGE_TAG: "bis"
+  KUBE_NAMESPACE: "dev"
+  HELM_RELEASE_NAME: "myapplication"
+  IMAGE_TAG: "latest"
 
 # Job pour builder et pousser l'image frontend sur DockerHub
 frontend_build_push:

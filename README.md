@@ -11,7 +11,7 @@
 
 - Monter un cluster kind avec la commande kind  " kind create cluster --name kind " 
 - Installer nginx ingress controller  " kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/kind/deploy.yaml " 
-- Si y'a des soucis avec l'ingress controller avec l'ingress faudra vérifier le service nginx ingress controller dans le namespace "ingress-nginx" ( NodePort svc )  et vérifier dans le fichier de configuration d'ingress y'a l'annotation de " kubernetes.io/ingress.class: "nginx" "  
+- Si y'a des soucis avec l'ingress controller et l'ingress faudra vérifier le service nginx ingress controller dans le namespace "ingress-nginx" ( NodePort svc )  et vérifier dans le fichier de configuration d'ingress y'a l'annotation de " kubernetes.io/ingress.class: "nginx" "  
 
 - EXTRAIRE Le port (NodePort) de service nginx ingress controller dans le cas de l'exercice ( 30947 )
 
