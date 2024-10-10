@@ -45,7 +45,7 @@ deploy_app:
   image: dtzar/helm-kubectl:3.16.1
   before_script:
     - kubectl config get-contexts
-    - kubectl config use-context kind-kind
+    - kubectl config use-context kind-$KIND_CLUSTER_NAME
     - |
       if ! kubectl get namespace $KUBE_NAMESPACE; then
         kubectl create namespace $KUBE_NAMESPACE
