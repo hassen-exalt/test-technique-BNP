@@ -5,7 +5,7 @@ metadata:
   namespace: {{ .Release.Namespace }}
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: / 
-    kubernetes.io/ingress.class: "nginx"  # c'est obligatoire de le definir dans notre cas car on utilise  l'ingress-nginx-controller  
+    kubernetes.io/ingress.class: "nginx"  # it is mandatory to add it because we use nginx-ingress-controller 
 spec:
   rules:
   - host: {{ .Values.ingress.host }}
