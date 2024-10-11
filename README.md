@@ -35,4 +35,4 @@
 
 # LIEN VERS UNE PIPELINE REUSSIE 
 
-- https://gitlab.com/Hassen_exalte/test-technique/-/pipelines/1491546794
+- https://gitlab.com/Hassen_exalte/test-technique/-/pipelines/1492502348
