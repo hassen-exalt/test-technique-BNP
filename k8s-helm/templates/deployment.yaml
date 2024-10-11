@@ -14,7 +14,8 @@ spec:
     metadata:
       labels:
         app: backend
-    spec:
+    spec: 
+      serviceAccountName: {{ .Release.Name }}-backend-sa
       containers:
       - name: backend
         image: {{ .Values.backend.image.repository }}:{{ .Values.backend.image.tag }}
@@ -52,7 +53,8 @@ spec:
     metadata:
       labels:
         app: front
-    spec:
+    spec: 
+      serviceAccountName: {{ .Release.Name }}-front-sa
       containers:
       - name: front
         image: {{ .Values.front.image.repository }}:{{ .Values.front.image.tag }} 
