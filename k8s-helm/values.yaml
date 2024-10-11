@@ -1,7 +1,8 @@
 front:
   replicas: 1
   image:
-    repository: XXX
+    repository: XXX # the repository is set in the gitlab ci pipeline ( set also in the pipeline process )
+  env:
     tag: test # the version of the image that was pushed on the dockerhub 
   env:
     REACT_APP_BACKEND_URL: "http://myapplication.local.test:30947/api"  # 30947 the Node Port number of the nginx ingress controller service (NodePort) it is mandatory to get it  to call the application wih 
@@ -10,8 +11,8 @@ front:
 backend:
   replicas: 1
   image:
-    repository: XXX
-    tag: test # the version of the image that was pushed on the dockerhub
+    repository: XXX  # the repository is set in the gitlab ci pipeline
+    tag: test # the version of the image that was pushed on the dockerhub ( set also in the pipeline process )
   env:
     SPRING_POSTGRES_USERNAME: "postgres"
     SPRING_POSTGRES_PASSWORD: "fPS5iekAPkmFSydS"
