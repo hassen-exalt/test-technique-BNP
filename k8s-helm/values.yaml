@@ -13,9 +13,9 @@ backend:
     repository: XXX  # the repository is set in the gitlab ci pipeline
     tag: test # the version of the image that was pushed on the dockerhub it will be set in the gitlab-ci 
   env:
-    SPRING_POSTGRES_USERNAME: "postgres"
-    SPRING_POSTGRES_PASSWORD: "fPS5iekAPkmFSydS"
-    SPRING_POSTGRES_URL: "jdbc:postgresql://database-2.cbwg4us8upvj.eu-west-3.rds.amazonaws.com:5432/database2" 
+    SPRING_POSTGRES_USERNAME: "test_username" #it will be changed with real value when we test the application
+    SPRING_POSTGRES_PASSWORD: "test_pass" #it will be changed with real value  when we test the application
+    SPRING_POSTGRES_URL: "test_db_host"  #it will be changed with real value when we test the application
     
 
 rbac:
